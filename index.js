@@ -32,11 +32,14 @@ function newInventory(){
 
 function move(element){
     element.style.position = 'fixed'
+
+    function moveToCoordinates(left, bottom){
+        element.style.left = left + 'px'
+        element.style.bottom = bottom + 'px'
+    }
+
     return {
-        to: function(left, bottom){
-            element.style.left = left + 'px'
-            element.style.bottom = bottom + 'px'
-        }
+        to: moveToCoordinates
     }
 }
 
