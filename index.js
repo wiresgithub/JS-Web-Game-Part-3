@@ -16,6 +16,10 @@ function newItem(url){
     return item
 }
 
+newItem('assets/sword.png', 500, 555)
+newItem('assets/shield.png', 165, 335)
+newItem('assets/staff.png', 600, 250)
+
 function newInventory(){
     let inventory = document.createElement('div')
     inventory.style.width = '100%'
