@@ -1,3 +1,33 @@
+function newImage(url){
+    let image = document.createElement('img')
+    image.src = url
+    document.body.append(image)
+    return image
+}
+
+function move(image, left, bottom){
+    image.style.position = 'fixed'
+    image.style.left = left + 'px'
+    image.style.bottom = bottom + 'px'
+}
+
+let greenCharacter = newImage('assets/green-character.gif')
+move(greenCharacter, 100, 250)
+function move(image){
+    image.style.position = 'fixed'
+    
+    function moveToCoordinates(left, bottom){
+        image.style.left = left + 'px'
+        image.style.bottom = bottom + 'px'
+    }
+
+    return {
+        to: moveToCoordinates
+    }
+}
+
+move(newImage('assets/green-character.gif')).to(100, 250)
+
 function newImage(url, left, bottom){
     let image = document.createElement('img')
     image.src = url
